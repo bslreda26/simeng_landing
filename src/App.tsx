@@ -87,7 +87,7 @@ ${formData.email}
 This message was sent from the Simeng website contact form.
       `;
 
-      const mailtoLink = `mailto:research@simeng.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:Hilal_reda@hotmail.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
@@ -753,7 +753,7 @@ This message was sent from the Simeng website contact form.
                   <Mail className="h-8 w-8 text-green-400 mr-6" />
                   <div>
                     <div className="font-semibold text-lg">Email</div>
-                    <div className="text-gray-300">research@simeng.com</div>
+                    <div className="text-gray-300">Hilal_reda@hotmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm">
@@ -782,7 +782,7 @@ This message was sent from the Simeng website contact form.
               <h3 className="text-2xl font-bold mb-8">Send us a message</h3>
               <p className="text-gray-300 mb-6 text-sm">
                 Fill out the form below and we'll open your email client to send
-                a message to research@simeng.com
+                a message to Hilal_reda@hotmail.com
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
