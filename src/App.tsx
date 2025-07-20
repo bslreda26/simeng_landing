@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import MethodXImage from "./assets/MethodX.png";
+import NanoImage from "./assets/Nano.png";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -81,7 +83,7 @@ ${formData.email}
 This message was sent from the Simeng website contact form.
       `;
 
-      const mailtoLink = `mailto:Hilal_reda@hotmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:simulation.engineering.leb@gmail.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
@@ -421,7 +423,20 @@ This message was sent from the Simeng website contact form.
                       src="https://images.unsplash.com/photo-1627389955805-5bf2447e9a75?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG5hbm8lMjBtb2RlbGluZyUyMGdyZWVufGVufDB8fDB8fHww"
                       alt="Computational Green Material Design"
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                        const fallback = e.currentTarget
+                          .nextElementSibling as HTMLElement;
+                        if (fallback) fallback.style.display = "block";
+                      }}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-blue-600/20 hidden">
+                      <div className="w-full h-full bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center">
+                        <Leaf className="h-16 w-16 text-white" />
+                      </div>
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-blue-600/20"></div>
                   </div>
                 </div>
@@ -451,6 +466,73 @@ This message was sent from the Simeng website contact form.
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Custom Images Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div data-aos="fade-up" className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-4">
+              Our Research Visualizations
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Advanced Computational Methods
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Explore our cutting-edge computational methodologies and nano-scale research visualizations that drive innovation in sustainable material design.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 3 }}
+              className="relative"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl transform rotate-2"></div>
+                <div className="relative bg-white rounded-3xl p-6 shadow-2xl">
+                  <img
+                    src={MethodXImage}
+                    alt="MethodX Computational Research"
+                    className="w-full h-auto rounded-2xl"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div className="mt-6 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Multiscale Analysis</h3>
+                <p className="text-gray-600">Advanced computational methodology for material property prediction</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 3.5 }}
+              className="relative"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-500 rounded-3xl transform -rotate-2"></div>
+                <div className="relative bg-white rounded-3xl p-6 shadow-2xl">
+                  <img
+                    src={NanoImage}
+                    alt="Nano-scale Research Visualization"
+                    className="w-full h-auto rounded-2xl"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div className="mt-6 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Nano-scale Analysis</h3>
+                <p className="text-gray-600">Molecular dynamics and nano-scale material characterization</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -574,6 +656,8 @@ This message was sent from the Simeng website contact form.
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute top-4 right-4">
@@ -676,12 +760,11 @@ This message was sent from the Simeng website contact form.
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl transform -rotate-3"></div>
                 <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
                   <div className="w-full h-80 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                    <img
-                      src="https://plus.unsplash.com/premium_photo-1716396589180-0a7050c21098?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHRlYW0lMjBvZiUyMGNvbXB1dGF0aW9uYWwlMjBtYXRlcmlhbCUyMHNjaWVudGlzdHN8ZW58MHx8MHx8fDA%3D"
-                      alt="Team of Computational Material Scientists"
-                      className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                    />
-                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="text-center text-white">
+                      <Leaf className="h-16 w-16 mx-auto mb-4" />
+                      <h3 className="text-2xl font-bold mb-2">Computational Excellence</h3>
+                      <p className="text-lg opacity-90">Advanced Material Science Research</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -747,7 +830,7 @@ This message was sent from the Simeng website contact form.
                   <Mail className="h-8 w-8 text-green-400 mr-6" />
                   <div>
                     <div className="font-semibold text-lg">Email</div>
-                    <div className="text-gray-300">Hilal_reda@hotmail.com</div>
+                    <div className="text-gray-300">simulation.engineering.leb@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm">
