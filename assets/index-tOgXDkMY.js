@@ -152,12 +152,6 @@ Contact Information:
 Research Interest:
 ${i.message}
 
-I am particularly interested in Simeng's expertise in:
-• Sustainable material development and computational modeling
-• Green technology innovations and carbon capture systems
-• Bio-based composites and circular economy solutions
-• Collaborative research opportunities and partnerships
-
 I would appreciate the opportunity to discuss potential collaboration areas and learn more about Simeng's current research projects and capabilities.
 
 Thank you for considering my inquiry. I look forward to your response.
