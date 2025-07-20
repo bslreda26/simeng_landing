@@ -56,11 +56,11 @@ function App() {
     try {
       // Create professional email content
       const subject =
-        "Research Collaboration Inquiry - Computational Green Material Design";
+        "Research Collaboration Inquiry - Simeng Computational Green Material Design";
       const body = `
-Dear Research Team at Simeng,
+Dear Simeng Research Team,
 
-I hope this message finds you well. I am writing to express my interest in potential research collaboration opportunities with your computational green material design team.
+I hope this message finds you well. I am writing to express my interest in potential research collaboration opportunities with Simeng's computational green material design initiatives.
 
 Contact Information:
 • Name: ${formData.firstName} ${formData.lastName}
@@ -69,13 +69,7 @@ Contact Information:
 Research Interest:
 ${formData.message}
 
-I am particularly interested in your work on:
-• Sustainable material development
-• Computational modeling approaches
-• Green technology innovations
-• Collaborative research opportunities
-
-I would appreciate the opportunity to discuss potential collaboration areas and learn more about your current research projects.
+I would appreciate the opportunity to discuss potential collaboration areas and learn more about Simeng's current research projects and capabilities.
 
 Thank you for considering my inquiry. I look forward to your response.
 
@@ -782,7 +776,7 @@ This message was sent from the Simeng website contact form.
               <h3 className="text-2xl font-bold mb-8">Send us a message</h3>
               <p className="text-gray-300 mb-6 text-sm">
                 Fill out the form below and we'll open your email client to send
-                a message to Hilal_reda@hotmail.com
+                a message to our research team at Simeng
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
