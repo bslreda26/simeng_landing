@@ -58,11 +58,11 @@ function App() {
     try {
       // Create professional email content
       const subject =
-        "Research Collaboration Inquiry - Simeng Computational Green Material Design";
+        "Research Collaboration Inquiry - SimEng Computational Green Material Design";
       const body = `
-Dear Simeng Research Team,
+Dear SimEng Research Team,
 
-I hope this message finds you well. I am writing to express my interest in potential research collaboration opportunities with Simeng's computational green material design initiatives.
+I hope this message finds you well. I am writing to express my interest in potential research collaboration opportunities with SimEng's computational green material design initiatives.
 
 Contact Information:
 • Name: ${formData.firstName} ${formData.lastName}
@@ -71,7 +71,7 @@ Contact Information:
 Research Interest:
 ${formData.message}
 
-I would appreciate the opportunity to discuss potential collaboration areas and learn more about Simeng's current research projects and capabilities.
+I would appreciate the opportunity to discuss potential collaboration areas and learn more about SimEng's current research projects and capabilities.
 
 Thank you for considering my inquiry. I look forward to your response.
 
@@ -80,7 +80,7 @@ ${formData.firstName} ${formData.lastName}
 ${formData.email}
 
 ---
-This message was sent from the Simeng website contact form.
+This message was sent from the SimEng website contact form.
       `;
 
       const mailtoLink = `mailto:simulation.engineering.leb@gmail.com?subject=${encodeURIComponent(
@@ -272,7 +272,7 @@ This message was sent from the Simeng website contact form.
               <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl mr-3 flex items-center justify-center">
                 <Leaf className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Simeng</span>
+              <span className="text-xl font-bold text-gray-900">SimEng</span>
             </motion.div>
 
             <motion.div
@@ -481,7 +481,9 @@ This message was sent from the Simeng website contact form.
               Advanced Computational Methods
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Explore our cutting-edge computational methodologies and nano-scale research visualizations that drive innovation in sustainable material design.
+              Explore our cutting-edge computational methodologies and
+              nano-scale research visualizations that drive innovation in
+              sustainable material design.
             </p>
           </motion.div>
 
@@ -505,8 +507,13 @@ This message was sent from the Simeng website contact form.
                 </div>
               </div>
               <div className="mt-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Multiscale Analysis</h3>
-                <p className="text-gray-600">Advanced computational methodology for material property prediction</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Multiscale Analysis
+                </h3>
+                <p className="text-gray-600">
+                  Advanced computational methodology for material property
+                  prediction
+                </p>
               </div>
             </motion.div>
 
@@ -529,8 +536,12 @@ This message was sent from the Simeng website contact form.
                 </div>
               </div>
               <div className="mt-6 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Nano-scale Analysis</h3>
-                <p className="text-gray-600">Molecular dynamics and nano-scale material characterization</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Nano-scale Analysis
+                </h3>
+                <p className="text-gray-600">
+                  Molecular dynamics and nano-scale material characterization
+                </p>
               </div>
             </motion.div>
           </div>
@@ -548,7 +559,7 @@ This message was sent from the Simeng website contact form.
               Computational Green Material Design
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              At Simeng, we specialize in computational modeling and in silico
+              At SimEng, we specialize in computational modeling and in silico
               design of sustainable materials, using advanced simulations to
               engineer nature-inspired solutions for green energy and
               eco-conscious technologies.
@@ -762,8 +773,12 @@ This message was sent from the Simeng website contact form.
                   <div className="w-full h-80 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center relative overflow-hidden">
                     <div className="text-center text-white">
                       <Leaf className="h-16 w-16 mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold mb-2">Computational Excellence</h3>
-                      <p className="text-lg opacity-90">Advanced Material Science Research</p>
+                      <h3 className="text-2xl font-bold mb-2">
+                        Computational Excellence
+                      </h3>
+                      <p className="text-lg opacity-90">
+                        Advanced Material Science Research
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -830,7 +845,9 @@ This message was sent from the Simeng website contact form.
                   <Mail className="h-8 w-8 text-green-400 mr-6" />
                   <div>
                     <div className="font-semibold text-lg">Email</div>
-                    <div className="text-gray-300">simulation.engineering.leb@gmail.com</div>
+                    <div className="text-gray-300">
+                      simulation.engineering.leb@gmail.com
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm">
@@ -859,7 +876,7 @@ This message was sent from the Simeng website contact form.
               <h3 className="text-2xl font-bold mb-8">Send us a message</h3>
               <p className="text-gray-300 mb-6 text-sm">
                 Fill out the form below and we'll open your email client to send
-                a message to our research team at Simeng
+                a message to our research team at SimEng
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -959,7 +976,7 @@ This message was sent from the Simeng website contact form.
                 <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl mr-3 flex items-center justify-center">
                   <Leaf className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-xl font-bold">Simeng</span>
+                <span className="text-xl font-bold">SimEng</span>
               </div>
               <p className="text-gray-300 leading-relaxed">
                 Pioneering sustainable material innovations for a greener
@@ -1043,7 +1060,7 @@ This message was sent from the Simeng website contact form.
             </div>
           </div>
           <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-            <p>&copy; 2025 Simeng. All rights reserved. by BSL</p>
+            <p>&copy; 2025 SimEng. All rights reserved. by BSL</p>
           </div>
         </div>
       </footer>
