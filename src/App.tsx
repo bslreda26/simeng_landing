@@ -15,11 +15,13 @@ import {
   Users,
   CheckCircle,
   Send,
+  FileText,
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MethodXImage from "./assets/MethodX.png";
 import NanoImage from "./assets/Nano.png";
+import PDFGenerator from "./components/PDFGenerator";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -31,6 +33,7 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
   const [expandedProjects, setExpandedProjects] = useState<number[]>([]);
+  const [showBrochure, setShowBrochure] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -258,6 +261,11 @@ This message was sent from the SimEng website contact form.
     { number: "70", label: "Publications", icon: Lightbulb },
   ];
 
+  // Show brochure page if brochure button is clicked
+  if (showBrochure) {
+    return <PDFGenerator onBack={() => setShowBrochure(false)} />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -310,6 +318,13 @@ This message was sent from the SimEng website contact form.
               >
                 Contact
               </a>
+              <button
+                onClick={() => setShowBrochure(true)}
+                className="text-gray-700 hover:text-green-600 transition-colors font-medium flex items-center"
+              >
+                <FileText className="h-4 w-4 mr-1" />
+                Brochure
+              </button>
             </motion.div>
 
             <motion.button
